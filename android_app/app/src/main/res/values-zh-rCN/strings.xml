@@ -1,0 +1,40 @@
+<resources>
+  <string name="app_name">代理抓包</string>
+
+  <!-- Main Activity -->
+  <string name="notify_title">代理正在运行</string>
+  <string name="notify_msg">代理正在运行</string>
+  <string name="start">开始</string>
+  <string name="stop">停止</string>
+  <string name="msg_start_failed">启动失败</string>
+  <string name="host_hint">代理地址 (ipv4:port)</string>
+  <string name="enter_host">输入有效的 ip v4 地址</string>
+
+  <!-- Main menu -->
+  <string name="title_show_about">关于</string>
+  <string name="title_activity_settings">设置</string>
+
+  <!-- Category -->
+  <string name="search">搜索</string>
+
+  <string name="pref_header_allowed_application_list">允许的应用程序列表</string>
+  <string name="pref_header_disallowed_application_list">禁止的应用程序列表</string>
+  <string name="pref_dialog_clear_all_application_msg">清除所有允许的选择 / 禁止的应用程序列表</string>
+
+  <string name="pref_vpn_connection_mode">允许 / 禁止 应用</string>
+  <string name="loading">请稍等</string>
+  <string name="vpn_connection_setting">VPN连接设置</string>
+  <string name="clear_all_select">清除所有选择</string>
+  <string-array name="pref_vpn_connection_name">
+    <item>禁止的应用</item>
+    <item>允许的应用</item>
+  </string-array>
+  <string-array name="pref_vpn_connection_value">
+    <item>禁止</item>
+    <item>允许</item>
+  </string-array>
+
+  <!-- sample ip and port -->
+  <string name="ip">192.168.x.x</string>
+  <string name="port">8888</string>
+</resources>

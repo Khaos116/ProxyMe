@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
         android:key="vpn_connection_setting"
-        android:title="VPN connection setting"
+        android:title="@string/vpn_connection_setting"
         android:enabled="true">
         <ListPreference
             android:key="vpn_connection_mode"

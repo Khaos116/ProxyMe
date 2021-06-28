@@ -23,6 +23,8 @@
 
     <string name="pref_vpn_connection_mode">Allowed / Disallowed Application</string>
     <string name="loading">Please wait</string>
+    <string name="vpn_connection_setting">VPN connection setting</string>
+    <string name="clear_all_select">Clear all selection</string>
     <string-array name="pref_vpn_connection_name">
         <item>Disallowed Application</item>
         <item>Allowed Application</item>
