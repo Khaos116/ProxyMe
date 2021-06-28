@@ -1,47 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="tun.proxy.MainActivity"
-    android:background="@color/colorPrimary"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical"
+      app:layout_constraintStart_toStartOf="parent"
+      >
+
+    <EditText
+        android:id="@+id/host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent">
+        android:hint="@string/host_hint"
+        android:inputType="text"
+        android:maxLines="1"
+        android:minWidth="60dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        />
 
-        <EditText
-            android:id="@+id/host"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:hint="@string/host_hint"
-            android:inputType="text"
-            android:maxLines="1"
-            android:minWidth="60dp"
-            android:singleLine="true" />
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="@string/start"
+        />
 
-        <Button
-            android:id="@+id/start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:text="@string/start" />
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_red"
+        android:text="@string/stop"
+        android:textColor="@color/white"
+        />
 
-        <Button
-            android:id="@+id/stop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:background="@drawable/button_red"
-            android:text="@string/stop" />
+  </LinearLayout>
 
-    </LinearLayout>
+  <TextView
+      android:id="@+id/tvMain"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:gravity="center"
+      android:text="Tips:\n更多里面可以设置需要抓哪些应用或者禁止抓哪些应用"
+      android:textColor="#00fff0"
+      android:visibility="gone"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText"
+      tools:visibility="visible"
+      />
 </androidx.constraintlayout.widget.ConstraintLayout>
