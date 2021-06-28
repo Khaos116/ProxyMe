@@ -43,7 +43,7 @@
 
         <PreferenceScreen
             android:key="vpn_clear_all_selection"
-            android:title="Clear all selection" />
+            android:title="@string/clear_all_select" />
 
     </PreferenceCategory>
 </PreferenceScreen>
