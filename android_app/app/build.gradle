@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "sperixlabs.proxyme"
@@ -10,7 +9,6 @@ android {
         targetSdkVersion 30
         versionCode 100000
         versionName VERSION_NAME
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++17 -fvisibility=hidden "
@@ -18,7 +16,6 @@ android {
                 arguments "-DCMAKE_VERBOSE_MAKEFILE=1 -DANDROID_FUNCTION_LEVEL_LINKING=ON"
             }
         }
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
         debug {
@@ -47,7 +44,8 @@ android {
         }
     }
 
-    ndkVersion = '22.0.7026061'
+    ndkVersion = '22.1.7171670'//修改为自己本地的版本 by Khaos 2021年6月28日22:35:31
+    //ndkVersion = '22.0.7026061'
 
     applicationVariants.all { variant ->
         if (variant.buildType.name.equals("release")) {
@@ -75,7 +73,4 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.navigation:navigation-fragment:2.3.0'
     implementation 'androidx.navigation:navigation-ui:2.3.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
