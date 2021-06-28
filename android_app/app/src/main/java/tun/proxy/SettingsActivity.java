@@ -1,36 +1,16 @@
 package tun.proxy;
 
 import android.annotation.TargetApi;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.*;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.os.AsyncTask;
-import android.os.Build;
-import android.os.Bundle;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.*;
+import android.view.*;
+import android.widget.SearchView;
+import androidx.appcompat.app.*;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.*;
-
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.*;
-
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.*;
 
 public class SettingsActivity extends AppCompatActivity {
     private static final String TAG = "SettingsActivity";
