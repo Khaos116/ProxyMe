@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">代理抓包</string>
+  <string name="app_name">手机抓包</string>
 
   <!-- Main Activity -->
   <string name="notify_title">代理正在运行</string>
