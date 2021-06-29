@@ -1,12 +1,14 @@
 package tun.proxy;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.*;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.*;
 import android.view.*;
 import android.widget.SearchView;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.*;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.*;
@@ -145,6 +147,14 @@ public class SettingsActivity extends AppCompatActivity {
             return false;
         }
 
+        @Override public boolean onOptionsItemSelected(@NonNull  MenuItem item) {
+            if(item.getItemId()== android.R.id.home){
+                Activity ac = getActivity();
+                if (ac != null) ac.onBackPressed();
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -439,7 +449,9 @@ public class SettingsActivity extends AppCompatActivity {
             int id = item.getItemId();
             switch (id) {
                 case android.R.id.home:
-                    startActivity(new Intent(getActivity(), SettingsActivity.class));
+                    Activity ac = getActivity();
+                    if (ac != null) ac.onBackPressed();
+                    //startActivity(new Intent(getActivity(), SettingsActivity.class));
                     return true;
                 case R.id.menu_sort_order_asc:
                     item.setChecked(!item.isChecked());
